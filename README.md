@@ -80,7 +80,8 @@ Para ello debemos hacer un aplicación con la siguiente funcionalidad y tenga la
   - Arquitectura usada.
   - Enumerar los 5 principios SOLID y poner 2 ejemplos con capturas de tu código donde los usases.
   - Justificación de las librerías usadas.
-  - La entrega es el viernes antes de las 18:00hs.
+  - Primera entrega viernes, 17 de septiembre de 2024 a las 18:00.
+  - Segunda entrega lunes, 16 de septiembre de 2024 a las 19:00.
 
 ## Recursos
 - Apuntes de Programación 1º DAW: https://github.com/joseluisgs/Programacion-00-2023-2024
