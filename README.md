@@ -60,7 +60,7 @@ Para ello debemos hacer un aplicación con la siguiente funcionalidad y tenga la
 - Se debe programar siguiendo el patrón ROP (Railway Oriented Programming) con un sistema de errores tipados al dominio, o usar excepciones dentro del dominio.
 - En todo momento debe haber un validador de datos que verifique que los datos antes de ser introducidos sean correctos.
 - Se deben implementar el repositorio de almacenamiento con las operaciones de selección completa, selección por id, selección por país, selección por ranking, inserción, actualización y borrado. Las salidas de listado deberán estar ordenadas por ranking ascendente. El ranking se calcula en base a puntos, tendrá mayor ranking cuando tengan más puntos.
-- Se debe testear todos los elementos realizados y asegurar un 90% de cobertura de los elementos funcionales.
+- Se debe testear todos los elementos realizados y asegurar un 90% de cobertura de los elementos funcionales ya sea usando test unitarios y test de integración. Apóyate de una librería de test con dobles o mocks cuando sea necesario.
 - Se debe usar un método manual o automatizado de inyección de dependencias.
 - La base de datos debe vaciarse a iniciarse la aplicación.
 - Los parámetros de configuración y uso de la base de datos deben estar en un fichero de properties.
@@ -70,6 +70,7 @@ Para ello debemos hacer un aplicación con la siguiente funcionalidad y tenga la
 - El lenguaje de programación debe ser Kotlin o Java y usar JDK 17 o superior.
 - Se debe implementar las operaciones de colecciones usando la API de colecciones funcional de Kotlin o Java.
 - La consola en su ejecución debe tener colores.
+- haznos un favor a todos y usa .gitignore de manera correcta.
 
 ## Entrega
 - Proyecto mediante Pull Request a este directorio en el directorio entregas. El subdirectorio que debes hacer es apellido_apellido_nombre.
@@ -79,6 +80,7 @@ Para ello debemos hacer un aplicación con la siguiente funcionalidad y tenga la
   - Arquitectura usada.
   - Enumerar los 5 principios SOLID y poner 2 ejemplos con capturas de tu código donde los usases.
   - Justificación de las librerías usadas.
+  - La entrega es el viernes antes de las 18:00hs.
 
 ## Recursos
 - Apuntes de Programación 1º DAW: https://github.com/joseluisgs/Programacion-00-2023-2024
