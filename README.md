@@ -72,9 +72,10 @@ java -jar torneo_tenis.jar fichero_entrada.csv fichero_salida.json
 - Se debe comentar tu código y obtener esta documentación en html (puedes usar herramientas como Dokka o JavaDoc).
 - Se debe trabajar con Git y Github siguiendo GitFlow.
 - El lenguaje de programación debe ser Kotlin o Java y usar JDK 17 o superior (recomendable 21LTS).
+- Se debe usar log, pero los log por pamntalla para DEBUG, los niveles INFO o superiores deben a ir a un fichero en el directorio /log de la aplicación.
 - Se debe implementar las operaciones de colecciones usando la API de colecciones funcional de Kotlin o Java.
 - La consola en su ejecución debe tener colores.
-- haznos un favor a todos y usa `.gitignore` de manera correcta.
+- Haznos un favor a todos y usa `.gitignore` de manera correcta.
 
 ## Entrega
 - Proyecto mediante `Pull Request` a este directorio en el directorio entregas. El subdirectorio que debes hacer es apellido_apellido_nombre.
