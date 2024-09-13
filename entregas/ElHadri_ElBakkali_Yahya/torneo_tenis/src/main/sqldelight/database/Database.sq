@@ -13,3 +13,6 @@ updated_at TEXT NOT NULL
 
 seleccionarTodosTenistas:
 SELECT * FROM TenistaEntity;
+
+eliminarTodosTenistas:
+DELETE FROM TenistaEntity;
