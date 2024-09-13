@@ -1,5 +1,6 @@
 package org.example.tenistas.models
 
+import org.example.models.Mano
 import java.time.LocalDateTime
 import java.time.LocalDate
 
