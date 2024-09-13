@@ -30,6 +30,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     // Mock
     testImplementation("io.mockk:mockk:1.13.10")
+    // Result ROP
+    implementation("com.michael-bull.kotlin-result:kotlin-result:2.0.0")
 }
 
 tasks.test {
