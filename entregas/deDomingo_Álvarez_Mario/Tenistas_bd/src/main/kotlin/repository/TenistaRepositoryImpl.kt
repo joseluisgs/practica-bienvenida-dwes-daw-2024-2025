@@ -1,11 +1,12 @@
 package org.example.tenistas.repository
 
-import org.example.tenistas.db.TenistaQueries
 import org.example.tenistas.models.Tenista
 
-class TenistaRepositoryImpl(private val queries: TenistaQueries) : TenistaRepository {
+class TenistaRepositoryImpl(
+/*private val queries: TenistaQueries*/
+) : TenistaRepository {
 
-    override fun findAll(): List<Tenista> {
+    /*override fun findAll(): List<Tenista> {
         return queries.selectAllTenistas().executeAsList()
     }
 
@@ -46,5 +47,24 @@ class TenistaRepositoryImpl(private val queries: TenistaQueries) : TenistaReposi
     override fun delete(id: Int): Boolean {
         queries.deleteTenista(id)
         return true
+    }*/
+    override fun findAll(): List<Tenista> {
+        TODO("Not yet implemented")
+    }
+
+    override fun findById(id: Int): Tenista? {
+        TODO("Not yet implemented")
+    }
+
+    override fun save(tenista: Tenista): Tenista {
+        TODO("Not yet implemented")
+    }
+
+    override fun update(tenista: Tenista): Tenista {
+        TODO("Not yet implemented")
+    }
+
+    override fun delete(id: Int): Boolean {
+        TODO("Not yet implemented")
     }
 }

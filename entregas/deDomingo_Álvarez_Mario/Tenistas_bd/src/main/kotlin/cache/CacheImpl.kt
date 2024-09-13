@@ -1,6 +1,4 @@
-package org.example.tenistas.cache
-
-import com.github.michaelbull.result.Err
+/*import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
 import org.example.tenistas.cache.error.CacheError
 import org.lighthousegames.logging.logging
@@ -45,3 +43,4 @@ open class CacheImpl<K, T>(
         cache.clear()
         return Ok(Unit)
     }
+*/
