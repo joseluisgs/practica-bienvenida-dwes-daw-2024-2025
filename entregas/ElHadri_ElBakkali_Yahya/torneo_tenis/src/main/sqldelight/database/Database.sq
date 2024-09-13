@@ -14,5 +14,17 @@ updated_at TEXT NOT NULL
 seleccionarTodosTenistas:
 SELECT * FROM TenistaEntity;
 
+seleccionarTenistaPorId:
+SELECT * FROM TenistaEntity WHERE id=?;
+
+guardarTenista:
+INSERT INTO TenistaEntity (id,nombre,pais,altura,peso,puntos,mano,fecha_nacimiento,updated_at,created_at) VALUES (?,?,?,?,?,?,?,?,?,?);
+
+eliminarTenistaPorId:
+DELETE FROM TenistaEntity WHERE id =?;
+
+updateTenista:
+UPDATE TenistaEntity SET nombre=?,pais=?,altura=?,peso=?,puntos=?,mano=?,fecha_nacimiento=?,updated_at=?,created_at=? WHERE id=?;
+
 eliminarTodosTenistas:
 DELETE FROM TenistaEntity;
