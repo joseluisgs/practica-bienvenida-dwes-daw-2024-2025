@@ -1,9 +1,6 @@
-package org.example.tenistas.dto
-
 import org.example.models.Mano
 import java.time.LocalDate
 import java.time.LocalDateTime
-import org.example.tenistas.models.Mano
 
 data class TenistaDTO(
     val id: Int = 0,
