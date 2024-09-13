@@ -14,7 +14,7 @@ data class TenistaDto (
     val altura:Int,
     val peso:Int,
     val puntos:Int,
-    val mano: MANO,
+    val mano: String,
     val fechaNacimiento: String,
     val created_at:String ,
     var updated_at: String
