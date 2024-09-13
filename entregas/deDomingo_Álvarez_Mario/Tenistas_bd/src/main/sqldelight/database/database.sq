@@ -1,0 +1,39 @@
+CREATE TABLE IF NOT EXISTS Tenista (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    pais TEXT NOT NULL,
+    altura REAL NOT NULL,
+    peso REAL NOT NULL,
+    puntos INTEGER NOT NULL,
+    mano TEXT NOT NULL,
+    fecha_nacimiento TEXT NOT NULL,
+    create_at TEXT NOT NULL,
+    update_at TEXT NOT NULL
+);
+
+-- Borrar todos los tenistas
+removeAllTenistas:
+DELETE FROM Tenista;
+
+-- Seleccionar todos los tenistas
+selectAllTenistas:
+SELECT * FROM Tenista;
+
+-- Seleccionar tenista por ID
+selectTenistaById:
+SELECT * FROM Tenista WHERE id = ?;
+
+-- Insertar nuevo tenista
+insertTenista:
+INSERT INTO Tenista (nombre, pais, altura, peso, puntos, mano, fecha_nacimiento, create_at, update_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+-- Actualizar tenista por ID
+updateTenista:
+UPDATE Tenista
+SET nombre = ?, pais = ?, altura = ?, peso = ?, puntos = ?, mano = ?, fecha_nacimiento = ?, update_at = ?
+WHERE id = ?;
+
+-- Eliminar tenista por ID
+deleteTenista:
+DELETE FROM Tenista WHERE id = ?;
