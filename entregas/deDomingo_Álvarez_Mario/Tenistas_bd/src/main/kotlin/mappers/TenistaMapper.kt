@@ -1,6 +1,4 @@
-package org.example.tenistas.mappers
-
-import org.example.tenistas.dto.TenistaDTO
+import org.example.models.Mano
 import org.example.tenistas.models.Tenista
 import java.time.LocalDateTime
 
@@ -33,5 +31,13 @@ object TenistaMapper {
             createdAt = dto.createdAt ?: LocalDateTime.now(),
             updatedAt = dto.updatedAt ?: LocalDateTime.now()
         )
+    }
+
+    fun elegirMano(s: String): Mano? {
+        return when (s) {
+            "DIESTRO" -> Mano.DIESTRO
+            "ZURDO" -> Mano.ZURDO
+            else -> null
+        }
     }
 }
