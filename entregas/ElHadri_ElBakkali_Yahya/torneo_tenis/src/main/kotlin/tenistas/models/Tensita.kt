@@ -4,7 +4,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-data class Tensita(
+data class Tenista(
     val id:Long = idAutonumerico(),
     val nombre:String,
     val pais:String,

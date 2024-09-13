@@ -6,11 +6,6 @@ import org.lighthousegames.logging.logging
 
 private val logger = logging()
 
-/**
- * Para el manejo de la base de datos y sus queries.
- * @author Yahya El Hadri
- * @since 1.0
- */
 
 class SqlDeLightManager(
     private val databaseUrl: String,
