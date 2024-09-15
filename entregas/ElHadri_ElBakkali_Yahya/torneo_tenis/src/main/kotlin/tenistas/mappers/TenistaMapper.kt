@@ -41,7 +41,7 @@ fun Tenista.toDto(): TenistaDto {
     )
 }
 
-fun TenistaDto.toEntity(): Tenista {
+fun TenistaDto.toTenista(): Tenista {
     val mano=when(mano){
         "ZURDO"->MANO.ZURDO
         "DIESTRO"->MANO.DIESTRO

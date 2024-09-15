@@ -32,6 +32,8 @@ dependencies {
     testImplementation("io.mockk:mockk:1.13.10")
     // Result ROP
     implementation("com.michael-bull.kotlin-result:kotlin-result:2.0.0")
+    //XML
+    implementation ("io.github.pdvrieze.xmlutil:serialization:0.84.3")
 }
 
 tasks.test {
