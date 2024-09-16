@@ -62,7 +62,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,7 +87,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "release/1.0.0",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -255,6 +255,7 @@
       <workItem from="1726472215243" duration="13672000" />
       <workItem from="1726487249568" duration="55000" />
       <workItem from="1726492980374" duration="6065000" />
+      <workItem from="1726500213459" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="Validador de argumentos">
       <option name="closed" value="true" />
