@@ -1,6 +1,9 @@
-/*import com.github.michaelbull.result.Err
+package cache
+
+import cache.error.CacheError
+import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
-import org.example.tenistas.cache.error.CacheError
+import com.github.michaelbull.result.Result
 import org.lighthousegames.logging.logging
 
 private val logger = logging()
@@ -43,4 +46,4 @@ open class CacheImpl<K, T>(
         cache.clear()
         return Ok(Unit)
     }
-*/
+}

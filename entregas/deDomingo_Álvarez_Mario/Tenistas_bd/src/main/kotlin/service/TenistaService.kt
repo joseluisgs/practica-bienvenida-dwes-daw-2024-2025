@@ -1,5 +1,3 @@
-package org.example.tenistas.service
-
 import org.example.tenistas.models.Tenista
 import org.example.tenistas.repository.TenistaRepository
 

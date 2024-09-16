@@ -37,7 +37,7 @@ object TenistaMapper {
         return when (s) {
             "DIESTRO" -> Mano.DIESTRO
             "ZURDO" -> Mano.ZURDO
-            else -> null
+            else -> Mano.DIESTRO
         }
     }
 }
