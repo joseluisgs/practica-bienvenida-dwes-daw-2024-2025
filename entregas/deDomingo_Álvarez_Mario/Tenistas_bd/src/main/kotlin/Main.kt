@@ -10,30 +10,32 @@ import kotlin.system.exitProcess
 private val logger = logging()
 
 fun main(args: Array<String>) {
-    if (args.isNotEmpty() && args[0] == "data/data.csv") {
+    if (args.isNotEmpty() && args[0].endsWith(".csv")) {
         val filePath = args[0]
         val file = File(filePath)
 
         logger.debug { "Cargando el archivo $filePath" }
-        logger.debug { file }
 
         if (!file.exists()) {
             println("El archivo $filePath no existe.")
             exitProcess(1)
         }
 
-        val storage = StorageCsvImpl()
-        val result = storage.importFromCSV(file)
+        try {
+            val storage = StorageCsvImpl()
+            val result = storage.importFromCSV(file)
 
-        result.fold(
-            { tenistas ->
-                consultas(tenistas)  // Llamamos a la función Consultas
-            },
-            { error ->
-                println("Error al cargar los tenistas: ${error.message}")
-                exitProcess(1)
-            }
-        )
+            result.fold(
+                { tenistas -> consultas(tenistas) },
+                { error ->
+                    println("Error al cargar los tenistas: ${error.message}")
+                    exitProcess(1)
+                }
+            )
+        } catch (e: Exception) {
+            println("Error inesperado: ${e.message}")
+            exitProcess(1)
+        }
 
     } else {
         println("Se necesita un archivo CSV válido como argumento.")
