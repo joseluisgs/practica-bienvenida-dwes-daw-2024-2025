@@ -1,10 +1,12 @@
-import Config.Config
+package org.example.service
+
+import config.Config
+import org.apache.ibatis.jdbc.ScriptRunner
 import org.lighthousegames.logging.logging
 import java.io.PrintWriter
 import java.io.Reader
 import java.sql.Connection
 import java.sql.DriverManager
-import org.apache.ibatis.jdbc.ScriptRunner
 
 private val logger = logging()
 
@@ -59,6 +61,7 @@ object DataBaseInitializer {
         }
     }
 
+
     /**
      * Inicializamos la conexión con la base de datos H2
      */
@@ -96,18 +99,37 @@ object DataBaseManager : AutoCloseable {
         DataBaseInitializer.initialize()
     }
 
-    override fun close() {
-        logger.debug { "Cerrando conexión con la base de datos H2" }
-        connection?.close()
-        logger.debug { "Conexión cerrada" }
+    private fun initConexion() {
+        // Inicializamos la base de datos
+        logger.debug { "Iniciando conexión con la base de datos" }
+        if (connection == null || connection!!.isClosed) {
+            connection = DriverManager.getConnection(Config.databaseUrl)
+        }
+        logger.debug { "Conexión con la base de datos inicializada" }
     }
 
-    fun <T> use(block: (Connection) -> T) {
+    /**
+     * Cerramos la conexión con la base de datos
+     */
+    override fun close() {
+        logger.debug { "Cerrando conexión con la base de datos" }
+        if (!connection!!.isClosed) {
+            connection!!.close()
+        }
+        logger.debug { "Conexión con la base de datos cerrada" }
+    }
+
+    /**
+     * Función para usar la base de datos y cerrarla al finalizar la operación
+     */
+
+    fun <T> use(block: (DataBaseManager) -> T) {
         try {
-            connection = DriverManager.getConnection(Config.databaseUrl)
-            block(connection!!)
+            initConexion()
+            block(this)
         } catch (e: Exception) {
             logger.error { "Error en la base de datos: ${e.message}" }
+            throw e
         } finally {
             close()
         }
