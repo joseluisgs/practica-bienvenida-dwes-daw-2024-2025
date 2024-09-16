@@ -1,41 +1,17 @@
 package org.example.mappers
-import java.time.LocalDate
+import models.Tenista
+import org.example.dto.TenistaDto
 
-/*Clase con funciones de extensión para transformar los datos de la clase DTO al modelo y viceversa
- */
-
-data class TenistaDto(
-    val id: Long,
-    val nombre: String,
-    val pais: String,
-    val altura: Int,
-    val peso: Int,
-    val mano: String,
-    val puntos: Int,
-    val createdAt: String,
-    val updatedAt: String?,
-    val isDeleted: Boolean
-)
+// Extensión para convertir de TenistaDto a Tenista
 
 /*
-data class Tenista(
-    val id: Long,
-    val nombre: String,
-    val ranking: Int,
-    val pais: String,
-    val edad: Int,
-    val mano: String,
-    val puntos: Int,
-    val createdAt: LocalDate,
-    val updatedAt: LocalDate?,
-    val isDeleted: Boolean
-)
-
-fun TenistaDto.toTenista(): Tenista {
+fun TenistaDto.toModel(): Tenista {
     return Tenista(
         id = this.id,
         nombre = this.nombre,
         pais = this.pais,
+        altura = this.altura,
+        peso = this.peso,
         mano = this.mano,
         puntos = this.puntos,
         createdAt = LocalDate.parse(this.createdAt),
@@ -43,16 +19,19 @@ fun TenistaDto.toTenista(): Tenista {
     )
 }
 
-fun Tenista.toTenistaDto(): TenistaDto {
+// Extensión para convertir de Tenista a TenistaDto
+fun Tenista.toDto(): TenistaDto {
+    val formatter = DateTimeFormatter.ISO_DATE_TIME
     return TenistaDto(
         id = this.id,
         nombre = this.nombre,
         pais = this.pais,
+        altura = this.altura,
+        peso = this.peso,
         mano = this.mano,
         puntos = this.puntos,
         createdAt = this.createdAt.toString(),
         updatedAt = this.updatedAt?.toString()
     )
 }
-
 */

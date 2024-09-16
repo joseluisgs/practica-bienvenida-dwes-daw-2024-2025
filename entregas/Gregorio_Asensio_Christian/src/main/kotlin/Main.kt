@@ -10,6 +10,7 @@ fun main(args: Array<String>) {
 
     println("Iniciando base de datos de Tenistas")
 
+   /* // Pendiente java jar. Prueba no ejecutar */
     if (1 == 2 && args.size < 1) {
         println("Uso: java -jar torneo_tenis.jar <fichero_entrada.csv> [fichero_salida.xxx]")
         return
@@ -29,13 +30,12 @@ fun main(args: Array<String>) {
     */
 
     val tenista = Tenista(1,
-         "nombre",
-        "pais", 180, 100, 2, Mano.DIESTRO.toString(), "fecha", null, null
+         "Christian",
+        "España", 176, 68, 15, Mano.DIESTRO.toString(), "fecha", null, null
     );
 
     val ten = repository.save(tenista)
     println("El tenista creado es : " + ten)
-
 
 
 
