@@ -22,8 +22,11 @@ dependencies {
     implementation("com.github.ajalt.mordant:mordant:2.0.0")
 
     // logger
-    implementation("org.lighthousegames:logging:1.3.0")
-    implementation("ch.qos.logback:logback-classic:1.5.0")
+    implementation("org.lighthousegames:logging:1.5.0")
+    //implementation("ch.qos.logback:logback-classic:1.5.0")
+    //implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+    implementation("org.slf4j:slf4j-api:1.7.32")
 
     // SQLDeLight para SQLite
     implementation("app.cash.sqldelight:sqlite-driver:2.0.2")

@@ -17,14 +17,16 @@ import org.example.validators.TenistaValidator
 import org.lighthousegames.logging.logging
 import java.time.LocalDate
 
-
+import org.slf4j.LoggerFactory
 /**
  * Práctica de bienvenida DWES: Gestión de tenistas
  * @author Germán Fernández
  * @version 1.3
  */
 
-private val logger = logging()
+//private val logger = logging()
+private val logger = LoggerFactory.getLogger("TenistaApp")
+
 val term = Terminal()
 
 fun main(args: Array<String>) {
@@ -36,6 +38,9 @@ fun main(args: Array<String>) {
         TenistaValidator(),
         TenistaFileStorageCsv())
 
+    //logger.warn("Warn Iniciando la aplicación...")
+    logger.error("Error al iniciar la aplicación")
+    logger.error("Error al iniciar la aplicación")
     val listaTenistas = service.loadTenistasFromCsv("data.csv")
 
     term.println(bold(blue("Contenido importado del fichero CSV de tenistas:")))
@@ -61,29 +66,29 @@ fun main(args: Array<String>) {
 fun mostrarConsultasBD(service: TenistasServiceImpl) {
 
     service.getById(1).onSuccess{
-        logger.debug { "Consulta por ID: ${it.toString()}" }
+        logger.debug ("Consulta por ID: ${it.toString()}")
         term.println(bold(brightBlue("Tenista por ID (1):")))
         imprimirSegunPuntuacion(it)
     }.onFailure {
-        logger.debug { "Error al consultar por ID: ${it.message}" }
+        logger.error  ("Error al consultar por ID: ${it.message}")
         term.println(bold(brightRed("Error al consultar tenista por ID (1)")))
     }
 
     service.getAll().onSuccess {
-        logger.debug { "Consulta todos los tenistas: " }
+        logger.debug("Consulta todos los tenistas: ")
         term.println(bold(brightBlue("Todos los tenistas: ${it.size} ")))
         it.forEach { imprimirSegunPuntuacion(it) }
     }.onFailure {
-        logger.debug { "Error al consultar todos los tenistas: ${it.message}" }
+        logger.error ("Error al consultar todos los tenistas: ${it.message}")
         term.println(bold(brightRed("Error al consultar todos los tenistas")))
     }
 
     service.getTenistaByRanking(3).onSuccess {
-        logger.debug { "Consulta tenista por ranking: 3" }
+        logger.debug ("Consulta tenista por ranking: 3")
         term.println(bold(brightBlue("Tenista por ranking (3):")))
         imprimirSegunPuntuacion(it)
     }.onFailure {
-        logger.debug { "Error al consultar tenista por ranking: 3" }
+        logger.error ("Error al consultar tenista por ranking: 3")
         term.println(bold(brightRed("Error al consultar tenista por ranking (1)")))
     }
 
@@ -96,20 +101,20 @@ fun mostrarConsultasBD(service: TenistasServiceImpl) {
         mano = Mano.DIESTRO,
         fechaNacimiento = LocalDate.of(1990, 5, 15)
     )).onSuccess {
-        logger.debug { "Tenista guardado correctamente" }
+        logger.debug  ("Tenista guardado correctamente")
         term.println(bold(brightGreen("Tenista guardado correctamente")))
         imprimirSegunPuntuacion(it)
     }.onFailure {
-        logger.debug { "Error al guardar el tenista: ${it.message}" }
+        logger.error  ("Error al guardar el tenista: ${it.message}")
         term.println(bold(brightRed("Error al guardar el tenista")))
     }
 
     service.getTenistasByPais("España").onSuccess {
-        logger.debug { "Consulta tenistas por país: España" }
+        logger.debug  ("Consulta tenistas por país: España")
         term.println(bold(brightBlue("Tenistas por país (España): ${it.size}")))
         it.forEach { imprimirSegunPuntuacion(it) }
     }.onFailure {
-        logger.debug { "Error al consultar tenistas por país: España" }
+        logger.error  ("Error al consultar tenistas por país: España")
         term.println(bold(brightRed("Error al consultar tenistas por país (España)")))
     }
 
@@ -144,7 +149,7 @@ private fun imprimirSegunPuntuacion(tenista: Tenista) {
  */
 private fun mostrarConsultas(listaTenistas: List<Tenista>) {
     term.println(bold(blue("Consultas sobre la lista de tenistas:")))
-    logger.debug {"Mostrando consultas"}
+    logger.debug ("Mostrando consultas")
     // tenistas ordenados con ranking, es decir, por puntos de mayor a menor
 
     term.println(bold(blue("tenistas ordenados con ranking, por puntos de mayor a menor:")))
