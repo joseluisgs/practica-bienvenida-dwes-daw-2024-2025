@@ -16,7 +16,7 @@ private val logger= logging()
 
 class TenistasStorageJSON:TenistasStorageExport {
     override fun store(file: File, lista: List<Tenista>): Result<Long, TenistasError> {
-        logger.debug { "Guardando usuarios en fichero json $file" }
+        logger.debug { "Guardando tenistas en fichero json $file" }
         return try {
             val json = Json {
                 prettyPrint = true

@@ -85,7 +85,7 @@ class TenistasServiceImpl(
     }
 
     override fun export(file: File, list: List<Tenista>): Result<Long, TenistasError> {
-        logger.debug { "Guardando reclutas en fichero" }
+        logger.debug { "Guardando tenistas en fichero" }
         return export.store(file,list)
     }
 }
