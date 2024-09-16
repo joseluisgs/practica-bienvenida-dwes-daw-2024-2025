@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS Tenistas_Entity (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nombre TEXT NOT NULL,
+pais TEXT NOT NULL,
+altura INTEGER NOT NULL,
+peso INTEGER NOT NULL,
+puntos INTEGER NOT NULL,
+mano TEXT NOT NULL,
+fecha_nacimiento TEXT NOT NULL,
+created_at TEXT NOT NULL,
+upadated_at TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM Tenistas_Entity;
+
+selectByName:
+SELECT * FROM Tenistas_Entity WHERE nombre = ?;
+
+selectById:
+SELECT * FROM Tenistas_Entity WHERE id = ?;
+
+updateTenista:
+UPDATE Tenistas_Entity SET nombre = ? , pais = ?, altura = ?,peso = ?, puntos = ?, mano = ?, fecha_nacimiento = ?, upadated_at = ? WHERE id = ?;
+
+deleteByName:
+DELETE FROM Tenistas_Entity WHERE nombre = ?;
+
+deleteById:
+DELETE FROM Tenistas_Entity WHERE id = ?;
+
+deleteAllTenistas:
+DELETE FROM Tenistas_Entity;
+
+insertTenista:
+INSERT INTO Tenistas_Entity (nombre, pais, altura, puntos, peso, mano, fecha_nacimiento, created_at, upadated_at) VALUES (?,?,?,?,?,?,?,?, ?);
+
