@@ -39,3 +39,5 @@ b
 2src/main/kotlin/tenista/services/TenistaService.kt,3\c\3ccea9b30b30a0e80c64e9423751f51e502e7664
 Z
 *src/main/kotlin/cache/errors/CacheError.kt,2\e\2e1f59f5125af1491e04a37ba2cc67a0ceb9397f
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
