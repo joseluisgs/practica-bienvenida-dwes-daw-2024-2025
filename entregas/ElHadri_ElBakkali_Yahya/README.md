@@ -1,4 +1,4 @@
-# Torne De Tenis 
+# Torneo De Tenis 
 ### Yahya el hadri el bakkali 
 
 
