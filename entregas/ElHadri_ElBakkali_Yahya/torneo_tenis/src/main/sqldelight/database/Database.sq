@@ -1,4 +1,4 @@
-CREATE TABLE TenistaEntity  (
+CREATE TABLE IF NOT EXISTS TenistaEntity  (
 id INTEGER PRIMARY KEY ,
 nombre TEXT NOT NULL,
 pais TEXT NOT NULL,

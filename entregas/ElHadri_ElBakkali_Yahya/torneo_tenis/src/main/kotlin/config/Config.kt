@@ -8,14 +8,9 @@ import kotlin.io.path.Path
 
 private val logger = logging()
 
-class Config {
+
+object Config {
     var databaseUrl: String = "jdbc:sqlite:torneo.db"
-        private set
-    var databaseInitTables: Boolean = false
-        private set
-    var databaseInitData: Boolean = false
-        private set
-    var databaseInMemory: Boolean = true
         private set
     var storageData: String = "data"
         private set
@@ -24,27 +19,18 @@ class Config {
 
     init {
         try {
-            logger.debug { "Cargando configuración" }
+            logger.debug { "Cargando configuración DataBaseManager" }
             val properties = Properties()
             properties.load(ClassLoader.getSystemResourceAsStream("config.properties"))
             databaseUrl = properties.getProperty("database.url", this.databaseUrl)
-            databaseInitTables =
-                properties.getProperty("database.init.tables", this.databaseInitTables.toString()).toBoolean()
-            databaseInitData =
-                properties.getProperty("database.init.data", this.databaseInitData.toString()).toBoolean()
-            databaseInMemory =
-                properties.getProperty("database.inmemory", this.databaseInMemory.toString()).toBoolean()
             storageData = properties.getProperty("storage.data", this.storageData)
             cacheSize = properties.getProperty("cache.size", this.cacheSize.toString()).toInt()
             logger.debug { "Configuración cargada correctamente" }
 
-            // crear el directorio si no existe
             Files.createDirectories(Path(storageData))
-
         } catch (e: Exception) {
             logger.error { "Error cargando configuración: ${e.message}" }
-            logger.error { "Usando valores por defecto" }
+            logger.info { "Usando valores por defecto" }
         }
-
     }
 }

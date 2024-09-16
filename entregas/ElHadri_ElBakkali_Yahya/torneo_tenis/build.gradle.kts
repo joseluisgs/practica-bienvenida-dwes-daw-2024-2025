@@ -25,6 +25,7 @@ dependencies {
     implementation("org.lighthousegames:logging:$logging_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
     //SqlDelight
+    implementation("org.xerial:sqlite-jdbc:3.45.2.0")
     implementation("app.cash.sqldelight:sqlite-driver:2.0.2")
     //Serialization JSON
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
@@ -33,7 +34,10 @@ dependencies {
     // Result ROP
     implementation("com.michael-bull.kotlin-result:kotlin-result:2.0.0")
     //XML
-    implementation ("io.github.pdvrieze.xmlutil:serialization:0.84.3")
+    implementation("io.github.pdvrieze.xmlutil:core-jvm:0.86.3")
+    implementation("io.github.pdvrieze.xmlutil:serialization-jvm:0.86.3")
+    //Mordant
+    implementation("com.github.ajalt.mordant:mordant:2.0.0-beta9")
 }
 
 tasks.test {
@@ -53,8 +57,8 @@ tasks.jar {
 }
 sqldelight {
     databases {
-        create("AppDatabase") {
-            packageName.set("dev.yahyaelhadri.database")
+        create("Database") {
+            packageName.set("org.example.database.service")
         }
     }
 }
