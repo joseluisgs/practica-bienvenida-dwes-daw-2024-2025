@@ -1,12 +1,15 @@
-package tenista.dto
+package tenistas.dto
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class TenistaDto(
-    val id: String,
+    val id: Int,
     val nombre: String,
     val pais: String,
-    val altura: String,
-    val peso: String,
-    val puntos: String,
+    val altura: Int,
+    val peso: Int,
+    val puntos: Int,
     val mano: String,
     val fecha_nacimiento: String,
     val created_at: String,

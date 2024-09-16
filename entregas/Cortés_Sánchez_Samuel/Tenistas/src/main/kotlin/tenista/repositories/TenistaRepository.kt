@@ -1,4 +1,4 @@
-package tenista.repository
+package tenista.repositories
 
 import tenista.models.Tenista
 

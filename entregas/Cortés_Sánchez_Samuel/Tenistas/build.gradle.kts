@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+    // Mordant
+    implementation("com.github.ajalt.mordant:mordant:2.0.0-beta9")
     // Logger
     implementation("org.lighthousegames:logging:1.3.0")
     implementation("ch.qos.logback:logback-classic:1.4.14")
@@ -50,4 +52,15 @@ sqldelight {
             packageName.set("dev.samuel.database")
         }
     }
+}
+
+tasks.jar {
+    archiveFileName.set("torneo_tenis.jar")
+    manifest {
+        attributes["Main-Class"] = "org.example.MainKt"
+    }
+    configurations["compileClasspath"].forEach { file: File ->
+        from(zipTree(file.absoluteFile))
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }

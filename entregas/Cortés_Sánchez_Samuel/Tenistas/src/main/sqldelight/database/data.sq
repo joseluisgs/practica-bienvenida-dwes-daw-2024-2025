@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS TenistaEntity(
-    id INTEGER PRIMARY KEY NOT NULL,
+CREATE TABLE IF NOT EXISTS TenistaEntity (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT NOT NULL,
     pais TEXT NOT NULL,
     altura INTEGER NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS TenistaEntity(
     updated_at TEXT NOT NULL
 );
 
-deleteAllTenistas:
+deleteAllTenista:
 DELETE FROM TenistaEntity;
 
 deleteTenistaById:
@@ -29,62 +29,3 @@ UPDATE TenistaEntity SET nombre=?,pais=?,altura=?,peso=?,puntos=?,mano=?,fecha_n
 insertTenista:
 INSERT INTO TenistaEntity(nombre,pais,altura,peso,puntos,mano,fecha_nacimiento,created_at,updated_at)
     VALUES (?,?,?,?,?,?,?,?,?);
-
-tenistaOrdenadosRanking:
-SELECT *
-FROM TenistaEntity
-ORDER BY puntos DESC;
-
-mediaAlturaTenistas:
-SELECT AVG(altura) AS media_altura
-FROM TenistaEntity;
-
-mediaPesoTenistas:
-SELECT AVG(peso) AS media_peso
-FROM TenistaEntity;
-
-tenistaMasAlto:
-SELECT *
-FROM TenistaEntity
-ORDER BY altura DESC
-LIMIT 1;
-
-tenistasEspanoles:
-SELECT *
-FROM TenistaEntity
-WHERE pais = 'España';
-
-tenistasAgrupadosPais:
-SELECT pais, count(*) AS numero_tenistas
-FROM TenistaEntity
-GROUP BY pais;
-
-tenistasAgrupadosPaisYPuntosDesc:
-SELECT pais, count(*) AS numero_tenistas, SUM(puntos) AS total_puntos
-FROM TenistaEntity
-GROUP BY pais
-ORDER BY puntos DESC;
-
-numTenistasManoDomYPuntuacionMedia:
-SELECT count(*) AS numero_tenistas, AVG(puntos) AS media_puntos
-FROM TenistaEntity
-GROUP BY mano;
-
-puntosTotalesPais:
-SELECT pais, Sum(puntos) AS puntos_totales
-FROM TenistaEntity
-GROUP BY pais;
-
-paisPuntuacionAlta:
-SELECT pais, SUM(puntos) AS puntos_totales
-FROM TenistaEntity
-GROUP BY pais
-ORDER BY puntos
-LIMIT 1;
-
-tenistaMayorRankingEspana:
-SELECT *
-FROM TenistaEntity
-WHERE pais = 'España'
-ORDER BY MAX(puntos) DESC
-LIMIT 1;
