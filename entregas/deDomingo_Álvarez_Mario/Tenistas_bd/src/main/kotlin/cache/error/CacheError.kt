@@ -1,3 +1,3 @@
-package org.example.tenistas.cache.error
+package cache.error
 
 class CacheError(val message: String)

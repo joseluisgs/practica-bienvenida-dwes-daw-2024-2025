@@ -5,6 +5,7 @@ import TenistaMapper.elegirMano
 import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
 import com.github.michaelbull.result.Result
+import org.example.models.Mano
 import org.example.tenistas.models.Tenista
 import org.lighthousegames.logging.logging
 import java.io.File
@@ -16,7 +17,7 @@ private val logger = logging()
 /**
  * Implementación del almacenamiento de tenistas desde y hacia archivos CSV.
  */
-class StorageCsvImpl: StorageCsv {
+class StorageCsvImpl : StorageCsv {
 
     /**
      * Carga tenistas desde un archivo CSV.
@@ -26,25 +27,22 @@ class StorageCsvImpl: StorageCsv {
     override fun importFromCSV(file: File): Result<List<Tenista>, Errors> {
         try {
             val tenistas = file.readLines()
-                .drop(1)
-                .mapNotNull {
+                .drop(1)  // Omitimos la cabecera del archivo CSV
+                .map {
                     val tenista = it.split(',')
-                    elegirMano(tenista[6])?.let { mano ->
-                        Tenista(
-                            id = tenista[0].toInt(),
-                            nombre = tenista[1],
-                            pais = tenista[2],
-                            altura = tenista[3].toDouble(),
-                            peso = tenista[4].toDouble(),
-                            puntos = tenista[5].toInt(),
-                            mano = mano,
-                            fechaNacimiento = LocalDate.parse(tenista[7]),
-                            createdAt = LocalDateTime.parse(tenista[8]),
-                            updatedAt = LocalDateTime.parse(tenista[9])
-                        )
-                    }
+                    Tenista(
+                        id = tenista[0].toInt(),
+                        nombre = tenista[1],
+                        pais = tenista[2],
+                        altura = tenista[3].toIntOrNull() ?: 0,
+                        peso = tenista[4].toIntOrNull() ?: 0,
+                        puntos = tenista[5].toIntOrNull() ?: 0,
+                        mano = elegirMano(tenista[6]) ?: Mano.DIESTRO,
+                        fechaNacimiento = LocalDate.parse(tenista[7]),
+                        createdAt = LocalDateTime.parse(tenista[8]),
+                        updatedAt = LocalDateTime.now()  // Asignamos la fecha de creación y actualización al momento de cargar.
+                    )
                 }
-
             return Ok(tenistas)
         } catch (e: Exception) {
             logger.debug { "Hubo un error al cargar los Tenistas del archivo ${file.name}: ${e.message}" }
