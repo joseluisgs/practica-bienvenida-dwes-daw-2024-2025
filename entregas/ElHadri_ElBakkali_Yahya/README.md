@@ -18,15 +18,17 @@ Utilizo la arquitectura monolitica ya que toda la lógica de la aplicación est�
 ## Principios SOLID
 
 1. S - Single Responsibility Principle (SRP) - Principio de responsabilidad única
-![SRP](imagenes/RSP.png)
+![SRP](capturas/SRP.png)
 
 2. O - Open/Closed Principle (OCP) - Principio de abierto/cerrado
 
 3. L - Liskov Substitution Principle (LSP) - Principio de sustitución de Liskov
 
 4. I - Interface Segregation Principle (ISP) - Principio de segregación de interfaces
-![ISP-1](imagenes/ISP-1.png)
-![ISP-2](imagenes/ISP-2.png)
+
+![ISP-1](capturas/ISP-1.png)
+
+![ISP-2](capturas/ISP-2.png)
 
 5. D - Dependency Inversion Principle (DIP) - Principio de inversión de dependencias
 
