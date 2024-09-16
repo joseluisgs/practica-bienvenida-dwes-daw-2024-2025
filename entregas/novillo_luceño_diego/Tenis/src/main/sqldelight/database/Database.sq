@@ -1,0 +1,50 @@
+CREATE TABLE TenistEntity (
+    id INTEGER PRIMARY KEY ,
+    name TEXT NOT NULL,
+    age INTEGER NOT NULL,
+    country TEXT NOT NULL,
+    weight INTEGER NOT NULL,
+    height REAL NOT NULL,
+    dominantHand TEXT NOT NULL,
+    points INTEGER NOT NULL,
+    birthDate TEXT NOT NULL,
+    createdAt TEXT NOT NULL,
+    updatedAt TEXT NOT NULL,
+    isDeleted INTEGER NOT NULL DEFAULT 0
+);
+
+insertTenist:
+INSERT INTO TenistEntity (id, name, age, country, weight, height, dominantHand, points, birthDate, createdAt, updatedAt )
+VALUES (?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?);
+
+removeAllTenists :
+DELETE FROM TenistEntity;
+
+tenistExists :
+SELECT COUNT(*) > 0
+FROM TenistEntity
+WHERE id = ?;
+
+findTenistById:
+SELECT * FROM TenistEntity WHERE id = ? LIMIT 1;
+
+updateTenist:
+UPDATE TenistEntity
+SET
+name = ?, age = ?,
+country = ?, weight = ?,
+height = ?, dominantHand = ?,
+points = ?, updatedAt = ?,
+birthDate = ?;
+
+getAllTenists:
+SELECT * FROM TenistEntity;
+
+countAllTenists:
+SELECT COUNT(*) FROM TenistEntity;
+
+deleteTenistPhysically:
+DELETE FROM TenistEntity WHERE id = ?;
+
+deleteTenistLogically:
+UPDATE TenistEntity SET isDeleted = 1 WHERE id = ?;
