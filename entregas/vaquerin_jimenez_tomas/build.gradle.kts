@@ -32,3 +32,11 @@ tasks.test {
 kotlin {
     jvmToolchain(21)
 }
+
+tasks.withType<Jar> {
+    archiveBaseName.set("torneo_tenis")
+    archiveVersion.set("1.0")
+    manifest {
+        attributes["Main-Class"] = "org.example.main.MainKt"
+    }
+}

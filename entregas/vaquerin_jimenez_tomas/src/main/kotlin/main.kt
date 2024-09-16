@@ -1,4 +1,4 @@
-package org.example
+package org.example.main
 
 import org.example.tenista.repository.TenistasRepositoryImpl
 import org.example.service.ReadFile
@@ -6,16 +6,21 @@ import org.example.service.Write
 import org.example.tenista.util.Consultas
 import java.io.File
 
-fun main() {
+
+fun main(args: Array<String>) {
+    if (args.size != 2) {
+        println("Uso: java -jar torneo_tenis.jar <fichero_entrada.csv> <fichero_salida.json>")
+        return
+    }
+
     // Ruta del archivo CSV de entrada
-    val inputFilePath = "src/main/resources/data.csv"
+    val inputFilePath = args[0]
 
     // Obtener el nombre del archivo sin extensión
     val inputFile = File(inputFilePath)
-    val baseName = inputFile.nameWithoutExtension
 
     // Ruta del archivo de salida con la misma ruta pero con extensión .json
-    val outputFilePath = "${inputFile.parent}/$baseName.json"
+    val outputFilePath = inputFile.parent + args[1]
 
     // Crear una instancia del servicio de lectura de archivos
     val readFileService = ReadFile()
