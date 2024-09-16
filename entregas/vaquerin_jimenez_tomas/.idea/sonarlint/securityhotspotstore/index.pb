@@ -46,3 +46,19 @@ W
 'src/main/kotlin/tenista/util/DBUtils.kt,9\4\94070a10346424df939806e117dc534052d3cc53
 S
 #src/main/kotlin/service/ReadFile.kt,f\7\f7d8d0c1b6588cd7ceac7013791d379e262210ec
+]
+-src/main/kotlin/tenista/error/TenistaError.kt,4\2\4263c7170e8fec624cef1fc4ca78e7aa619ca720
+P
+ src/main/kotlin/service/Write.kt,2\4\24fa022f999fb81a57c97c5c81728dffe14a12e3
+[
++src/main/kotlin/service/write/FileWriter.kt,d\4\d42b5f3bcdd51a9d3db053af1e591d46f6df7515
+^
+.src/main/kotlin/service/write/FileWriteImpl.kt,9\8\98fe4520a95e5e30129d72e348124d50b730cb7b
+7
+si.json,e\9\e919e1ac1a1da8e958d554149d4130b24c24d344
+6
+si.xml,c\5\c51a28fab5b50823b267cf4d27955b80f836412a
+6
+si.csv,0\7\07fdf0905a6573026a8fac50f59bec300bf19e89
+Y
+)src/main/kotlin/tenista/util/Consultas.kt,e\a\ea6474cab6db509b3392d0476e9820b8c6104ca1

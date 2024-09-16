@@ -1,5 +1,5 @@
 id,nombre,pais,altura,peso,puntos,mano,fecha_nacimiento
-1,Novak Djokovic,Serbia,188,77,12030,DIESTRO,1987-05-22
+1,Novak Djokovic,Serbia,188,77,12,DIESTRO,1987-05-22
 2,Daniil Medvedev,Rusia,198,83,10370,DIESTRO,1996-02-11
 3,Rafael Nadal,España,185,85,8270,ZURDO,1986-06-03
 4,Dominic Thiem,Austria,185,79,7425,DIESTRO,1993-09-03

@@ -14,7 +14,8 @@ data class Tenista(
     val mano: Mano,
     val fechaNacimiento: LocalDate,
     val createdAt: LocalDateTime = LocalDateTime.now(),
-    val updatedAt: LocalDateTime = LocalDateTime.now()
+    val updatedAt: LocalDateTime = LocalDateTime.now(),
+    val ranking: Int = 0
 )
 
 enum class Mano {

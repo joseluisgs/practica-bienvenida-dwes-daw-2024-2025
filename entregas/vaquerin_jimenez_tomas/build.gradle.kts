@@ -17,6 +17,11 @@ dependencies {
     implementation("com.h2database:h2:2.2.224")
     // scrips de la base de datos
     implementation("org.mybatis:mybatis:3.5.13")
+
+    //xml
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.13.0")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.0")
     //test
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }

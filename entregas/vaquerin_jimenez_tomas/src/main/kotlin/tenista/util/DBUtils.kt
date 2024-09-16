@@ -17,6 +17,7 @@ object DBUtils {
         stmt.setDate(7, java.sql.Date.valueOf(tenista.fechaNacimiento))
         stmt.setTimestamp(8, java.sql.Timestamp.valueOf(timeStamp))
         stmt.setTimestamp(9, java.sql.Timestamp.valueOf(timeStamp))
+        stmt.setInt(10, tenista.ranking)
     }
 
     fun executeUpdateAndGetGeneratedKey(stmt: PreparedStatement): Long? {
@@ -41,7 +42,8 @@ object DBUtils {
             mano = Mano.valueOf(getString("mano")),
             fechaNacimiento = getDate("fecha_nacimiento").toLocalDate(),
             createdAt = getTimestamp("created_at").toLocalDateTime(),
-            updatedAt = getTimestamp("updated_at").toLocalDateTime()
+            updatedAt = getTimestamp("updated_at").toLocalDateTime(),
+            ranking = getInt("ranking")
         )
     }
 }

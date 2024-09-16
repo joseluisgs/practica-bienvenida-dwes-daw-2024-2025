@@ -8,5 +8,4 @@ interface TenistaService {
     fun create(tenista: Tenista): Tenista
     fun update(id: Long, tenista: Tenista): Tenista?
     fun delete(id: Long): Tenista?
-
 }
