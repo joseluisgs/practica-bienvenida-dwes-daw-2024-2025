@@ -32,5 +32,33 @@ fun main(args:Array<String>) {
     }else if(args.size==2 && validador.validatorArgsSalida(args[1]) != "Ok"){
        terminal.println(TextColors.red(validador.validatorArgsSalida(args[1])))
     }
-    
+    if (lista.size>0){
+        terminal.println(TextColors.blue("Consultas"))
+        terminal.println(TextColors.yellow("Tenistas ordenados con ranking, es decir, por puntos de mayor a menor"))
+        lista.sortedByDescending { it.puntos }.forEach { println(it.nombre+" "+it.puntos) }
+        terminal.println(TextColors.yellow("media de altura de los tenistas"))
+        println(lista.map { it.altura }.average())
+        terminal.println(TextColors.yellow("media de peso de los tenistas"))
+        println(lista.map { it.peso }.average())
+        terminal.println(TextColors.yellow("tenista más alto"))
+        println( lista.maxBy { it.altura }.nombre)
+        terminal.println(TextColors.yellow("tenistas de España"))
+        lista.filter { it.pais=="España" }.forEach { it.nombre }
+        terminal.println(TextColors.yellow("tenistas agrupados por país"))
+        lista.groupBy { it.pais }.forEach { (pais, tenistas) ->
+            println("País: $pais")
+            tenistas.forEach { println(" - ${it.nombre}\n") }
+        }
+        terminal.println(TextColors.yellow("número de tenistas agrupados por país y ordenados por puntos descendente"))
+        lista.groupBy { it.pais }
+            .mapValues {
+                it.value.sortedByDescending { it.puntos }
+            }
+            .forEach { (pais, tenistas) ->
+                println("País: $pais")
+                tenistas.forEach { println("  - ${it.nombre} ~ ${it.puntos} puntos\n") }
+            }
+
+    }
+
 }
