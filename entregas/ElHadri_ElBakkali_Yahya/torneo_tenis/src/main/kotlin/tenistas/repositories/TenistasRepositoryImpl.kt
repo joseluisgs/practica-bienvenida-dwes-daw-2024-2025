@@ -5,7 +5,7 @@ import org.lighthousegames.logging.logging
 import tenistas.mappers.toTenista
 import tenistas.models.Tenista
 private val logger = logging()
-class ReclutaRepositoryImpl(
+class TenistasRepositoryImpl(
     private val dbManager: SqlDeLightManager
 ):TenistaRepository {
     private val db = dbManager.databaseQueries
