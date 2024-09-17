@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d8a4893-14a4-437d-9329-b0e5bb8e860f" name="Changes" comment="Resolving Conflicts" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="torneo_tenis" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="torneo_tenis" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="torneo_tenis" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="torneo_tenis" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="sqldelight" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Object" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2m0fi412QWGPHxjuqq0zpEfygW0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build torneo_tenis.executor": "Run",
+    "Gradle.torneo_tenis [build].executor": "Run",
+    "Gradle.torneo_tenis [clean].executor": "Run",
+    "Gradle.torneo_tenis [generateMainAppDatabaseInterface].executor": "Run",
+    "Gradle.torneo_tenis [jar].executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "stored_options": "{\"dialectConnections\":{\"app.cash.sqldelight.dialects.sqlite_3_18.SqliteDialect\":{\"orderedOptions\":[],\"serializedProperties\":{}}}}",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\2ºDAW\DesWebEntServ\torneo_tenis" />
+      <recent name="C:\2ºDAW\DesWebEntServ\torneo_tenis\data" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="tenistas.errors" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="torneo_tenis [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="torneo_tenis [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="torneo_tenis [generateMainAppDatabaseInterface]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="generateMainAppDatabaseInterface" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="torneo_tenis [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="torneo_tenis.main" />
+      <option name="PROGRAM_PARAMETERS" value="C:\2ºDAW\DesWebEntServ\torneo_tenis\data\data.csv torneo_tenis.xml" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.torneo_tenis [jar]" />
+      <item itemvalue="Gradle.torneo_tenis [build]" />
+      <item itemvalue="Gradle.torneo_tenis [clean]" />
+      <item itemvalue="Gradle.torneo_tenis [generateMainAppDatabaseInterface]" />
+      <item itemvalue="Kotlin.MainKt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.torneo_tenis [jar]" />
+        <item itemvalue="Gradle.torneo_tenis [generateMainAppDatabaseInterface]" />
+        <item itemvalue="Gradle.torneo_tenis [build]" />
+        <item itemvalue="Gradle.torneo_tenis [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-liberica-17.0.9-f644763e9732-bdbb3023" />
+        <option value="jdk-21.0.1-liberica-21.0.1-f644763e9732-864bc1eb" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d8a4893-14a4-437d-9329-b0e5bb8e860f" name="Changes" comment="" />
+      <created>1726218540993</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726218540993</updated>
+      <workItem from="1726218542057" duration="5159000" />
+      <workItem from="1726233650593" duration="15000" />
+      <workItem from="1726236389861" duration="5071000" />
+      <workItem from="1726310457538" duration="3639000" />
+      <workItem from="1726323933298" duration="2542000" />
+      <workItem from="1726405487753" duration="29000" />
+      <workItem from="1726405527846" duration="5496000" />
+      <workItem from="1726439437621" duration="1930000" />
+      <workItem from="1726472215243" duration="13672000" />
+      <workItem from="1726487249568" duration="55000" />
+      <workItem from="1726492980374" duration="6065000" />
+      <workItem from="1726500213459" duration="28000" />
+    </task>
+    <task id="LOCAL-00001" summary="Validador de argumentos">
+      <option name="closed" value="true" />
+      <created>1726220243522</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726220243522</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Validador del formato del csv">
+      <option name="closed" value="true" />
+      <created>1726221665235</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726221665235</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Creando configuración y clases">
+      <option name="closed" value="true" />
+      <created>1726223688545</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726223688545</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Config, manager y sq">
+      <option name="closed" value="true" />
+      <created>1726238177532</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726238177532</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Generación de código SQLDelight">
+      <option name="closed" value="true" />
+      <created>1726239701626</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726239701626</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Repositorio de tenistas finalizado. Se ha añadido una función Locale y mappers para el cambio de tipos con el acceso a la B.D.">
+      <option name="closed" value="true" />
+      <created>1726313582055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726313582055</updated>
+    </task>
+    <task id="LOCAL-00007" summary="CSV Storage">
+      <option name="closed" value="true" />
+      <created>1726326356851</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726326356851</updated>
+    </task>
+    <task id="LOCAL-00008" summary="JSON Storage">
+      <option name="closed" value="true" />
+      <created>1726406489625</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406489625</updated>
+    </task>
+    <task id="LOCAL-00009" summary="XML Storage">
+      <option name="closed" value="true" />
+      <created>1726407131250</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726407131250</updated>
+    </task>
+    <task id="LOCAL-00010" summary="cache y parte del service">
+      <option name="closed" value="true" />
+      <created>1726411322051</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726411322051</updated>
+    </task>
+    <task id="LOCAL-00011" summary="TenistasService terminado">
+      <option name="closed" value="true" />
+      <created>1726472321271</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726472321271</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Consultas terminado, falta retocar la entrada de argumentos">
+      <option name="closed" value="true" />
+      <created>1726477664317</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726477664317</updated>
+    </task>
+    <task id="LOCAL-00013" summary="argumentos salida">
+      <option name="closed" value="true" />
+      <created>1726480938516</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726480938516</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Funcionando">
+      <option name="closed" value="true" />
+      <created>1726485278761</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726485278761</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Funcionando">
+      <option name="closed" value="true" />
+      <created>1726486411742</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1726486411742</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Funcionando">
+      <option name="closed" value="true" />
+      <created>1726486417986</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726486417986</updated>
+    </task>
+    <task id="LOCAL-00017" summary="logs">
+      <option name="closed" value="true" />
+      <created>1726487296377</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726487296377</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Documentacion">
+      <option name="closed" value="true" />
+      <created>1726494947560</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726494947560</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Capturas">
+      <option name="closed" value="true" />
+      <created>1726498679585</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726498679585</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Resolving Conflicts">
+      <option name="closed" value="true" />
+      <created>1726498857411</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1726498857411</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Validador de argumentos" />
+    <MESSAGE value="Validador del formato del csv" />
+    <MESSAGE value="Creando configuración y clases" />
+    <MESSAGE value="Config, manager y sq" />
+    <MESSAGE value="Generación de código SQLDelight" />
+    <MESSAGE value="Repositorio de tenistas finalizado. Se ha añadido una función Locale y mappers para el cambio de tipos con el acceso a la B.D." />
+    <MESSAGE value="CSV Storage" />
+    <MESSAGE value="JSON Storage" />
+    <MESSAGE value="XML Storage" />
+    <MESSAGE value="cache y parte del service" />
+    <MESSAGE value="TenistasService terminado" />
+    <MESSAGE value="Consultas terminado, falta retocar la entrada de argumentos" />
+    <MESSAGE value="argumentos salida" />
+    <MESSAGE value="Funcionando" />
+    <MESSAGE value="logs" />
+    <MESSAGE value="Documentacion" />
+    <MESSAGE value="Capturas" />
+    <MESSAGE value="Resolving Conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolving Conflicts" />
+  </component>
+</project>
