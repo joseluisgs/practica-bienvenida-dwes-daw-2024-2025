@@ -1,0 +1,90 @@
+CREATE TABLE IF NOT EXISTS TenistaEntity(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    pais TEXT NOT NULL,
+    altura INTEGER NOT NULL,
+    peso INTEGER NOT NULL,
+    puntos INTEGER NOT NULL,
+    mano TEXT NOT NULL,
+    fecha_nacimiento TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL
+);
+
+deleteAllTenista:
+DELETE FROM TenistaEntity;
+
+selectAllTenista:
+SELECT * FROM TenistaEntity;
+
+selectTenistaById:
+SELECT * FROM TenistaEntity WHERE id = ?;
+
+updateTenista:
+UPDATE TenistaEntity SET nombre=?, pais=?,altura= ?, peso=?, puntos=?, fecha_nacimiento=? , created_at=?, updated_at=? WHERE id=?;
+
+deleteByIdTenista:
+DELETE FROM TenistaEntity WHERE id =?;
+
+selectTenistaByPais:
+SELECT * FROM TenistaEntity WHERE nombre = ?;
+
+insertTenista:
+INSERT INTO TenistaEntity(id,nombre,pais, altura, peso, puntos,mano,fecha_nacimiento,created_at,updated_at)
+VALUES(?,?,?,?,?,?,?,?,?,?);
+
+obtenerTenistaConMasRango:
+SELECT * FROM TenistaEntity WHERE puntos = (SELECT MAX(puntos) FROM TenistaEntity);
+
+ordentenista:
+SELECT * FROM TenistaEntity ORDER BY puntos DESC;
+
+media_altura:
+SELECT AVG(altura) AS mediaaltura FROM TenistaEntity;
+
+media_peso:
+SELECT AVG(peso) AS media_peso FROM TenistaEntity;
+
+obtenerTenistaMasAlto:
+SELECT * FROM TenistaEntity ORDER BY altura DESC LIMIT 1;
+
+TenistasEspanoles:
+SELECT * FROM TenistaEntity WHERE pais = 'España';
+
+TenistasPais:
+SELECT pais, COUNT(*) AS num_tenistas FROM TenistaEntity GROUP BY pais;
+
+TenistasAgrupadosPorPais:
+SELECT pais, COUNT(*) AS num_tenistas
+FROM TenistaEntity
+GROUP BY pais
+ORDER BY puntos DESC;
+
+TenistaAgrupadosPorManoyPuntuacion:
+SELECT mano, COUNT(*) AS num_tenistas, AVG(puntos) AS puntuacion_media
+FROM TenistaEntity
+GROUP BY mano;
+
+PuntuacionTotalAgrupadaPorPais:
+
+SELECT pais, SUM(puntos) AS puntuacion_total
+FROM TenistaEntity
+GROUP BY pais;
+
+PaisMayorPuntuacion:
+SELECT pais, SUM(puntos) AS puntuacion_total
+FROM TenistaEntity
+GROUP BY pais
+ORDER BY puntuacion_total DESC
+LIMIT 1;
+
+TenistaMayorPuntuacion:
+SELECT * FROM TenistaEntity
+WHERE pais = 'España'
+ORDER BY puntos DESC
+LIMIT 1;
+
+
+
+
+
