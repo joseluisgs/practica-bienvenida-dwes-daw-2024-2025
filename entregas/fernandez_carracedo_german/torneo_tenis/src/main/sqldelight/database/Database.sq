@@ -1,0 +1,45 @@
+CREATE TABLE IF NOT EXISTS TenistaEntity (
+    id INTEGER PRIMARY KEY,
+    nombre TEXT NOT NULL,
+    pais TEXT NOT NULL,
+    altura INTEGER NOT NULL,
+    peso INTEGER NOT NULL,
+    puntos INTEGER NOT NULL,
+    mano TEXT NOT NULL,
+    fechaNacimiento TEXT DEFAULT CURRENT_DATE,
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Operaciones CRUD para la tabla de Tenistas
+removeAllTenistas:
+DELETE FROM TenistaEntity;
+
+selectAllTenistas:
+SELECT * FROM TenistaEntity;
+
+selectTenistaByNombre:
+SELECT * FROM TenistaEntity WHERE nombre = ?;
+
+selectAllTenistasByPais:
+SELECT * FROM TenistaEntity WHERE pais = ?;
+
+selectTenistaByRanking:
+SELECT * FROM TenistaEntity
+ORDER BY puntos DESC
+LIMIT 1 OFFSET ? - 1;
+
+selectTenistaById:
+SELECT * FROM TenistaEntity WHERE id = ?;
+
+selectTenistaEntityLastInserted:
+SELECT * FROM TenistaEntity WHERE id = last_insert_rowid();
+
+insertTenista:
+INSERT INTO TenistaEntity (nombre, pais, altura, peso, puntos, mano, fechaNacimiento, created_at, updated_at) VALUES (?, ?, ?, ?, ?,?,?,?,?);
+
+updateTenista:
+UPDATE TenistaEntity SET nombre = ?, pais = ?, altura = ?, peso=?, puntos=?, mano=?, fechaNacimiento=?, updated_at = ? WHERE id = ?;
+
+deleteTenista:
+DELETE FROM TenistaEntity WHERE id = ?;
